@@ -4,46 +4,46 @@ Feature: Cadastro de pessoa usuária
   Background:
     Given que a pessoa usuária acessa a página de cadastro da Lacrei Saúde
 
-  Scenario: Realizar cadastro com sucesso []
+  Scenario: Realizar cadastro com sucesso [PASSOU]
     When preencher todos os campos obrigatórios com dados válidos
     And aceitar os termos da plataforma
     And clicar no botão "Cadastrar"
     Then o sistema deve criar a conta com sucesso
     And a pessoa usuária deve ser redirecionada para o fluxo pós-cadastro
 
-  Scenario: Tentar realizar cadastro com campos obrigatórios vazios []
+  Scenario: Tentar realizar cadastro com campos obrigatórios vazios [PASSOU]
     When clicar no botão "Cadastrar" sem preencher os campos obrigatórios
     Then o sistema deve exibir mensagens de validação nos campos obrigatórios
 
-  Scenario: Tentar realizar cadastro com e-mail inválido []
+  Scenario: Tentar realizar cadastro com e-mail inválido [PASSOU]
     When preencher o campo e-mail com um formato inválido
-    And preencher os demais campos corretamente
+    And preencher os demais campos corretamente  
     And clicar no botão "Cadastrar"
     Then o sistema deve exibir mensagem de e-mail inválido
 
-  Scenario: Tentar realizar cadastro com senha inválida []
+  Scenario: Tentar realizar cadastro com senha inválida [PASSOU]
     When preencher o campo senha fora do padrão exigido
     And preencher os demais campos corretamente
     And clicar no botão "Cadastrar"
     Then o sistema deve exibir mensagem de senha inválida
 
-  Scenario: Validar obrigatoriedade de aceite dos termos []
+  Scenario: Validar obrigatoriedade de aceite dos termos [PASSOU]
     When preencher todos os campos corretamente
     But não aceitar os termos da plataforma
     And clicar no botão "Cadastrar"
     Then o sistema deve impedir o cadastro da pessoa usuária
 
-  Scenario: Validar redirecionamento após cadastro []
+  Scenario: Validar redirecionamento após cadastro [PASSOU]
     When realizar cadastro com sucesso
     Then a pessoa usuária deve acessar o fluxo pós-cadastro
 
-  Scenario: Validar comportamento responsivo da tela de cadastro no mobile []
+  Scenario: Validar comportamento responsivo da tela de cadastro no mobile [NÃO PASSOU](há uma quebra de layout em versões de tablet)
     Given que a aplicação está em resolução mobile
     When acessar a tela de cadastro
     Then os campos e botões devem permanecer visíveis e utilizáveis
     And não deve existir quebra crítica de layout
 
-  Scenario: Validar comportamento responsivo da tela de cadastro no desktop []
+  Scenario: Validar comportamento responsivo da tela de cadastro no desktop [PASSOU]
     Given que a aplicação está em resolução desktop
     When acessar a tela de cadastro
     Then os componentes devem ser exibidos corretamente
