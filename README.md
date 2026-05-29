@@ -6,6 +6,35 @@ O objetivo deste repositório é validar qualidade funcional, acessibilidade, re
 
 ---
 
+# 📌 Observação sobre Automação e CI/CD
+
+Embora o desafio sugira a implementação de automação utilizando Cypress e integração contínua via GitHub Actions, neste projeto optei por não desenvolver a automação completa e pipeline CI/CD.
+
+A decisão foi tomada de forma estratégica visando aprofundar meus estudos em automação mobile e testes end-to-end utilizando ferramentas como:
+
+* Appium
+* Automação mobile híbrida
+* Testes cross-platform
+* Estratégias de automação orientadas a dispositivos móveis
+* Arquitetura de testes automatizados mais escalável
+
+Como foco principal deste desafio, priorizei:
+
+* Estruturação completa da documentação de QA
+* Criação detalhada de cenários e casos de teste em Gherkin
+* Execução manual dos fluxos críticos
+* Testes exploratórios
+* Análise de acessibilidade
+* Testes de responsividade
+* Testes de performance
+* Gestão de riscos
+* Registro estruturado de bugs e melhorias
+
+Essa abordagem permitiu concentrar esforços na análise crítica da qualidade da aplicação, comportamento do usuário, experiência de navegação e identificação de riscos relevantes para o produto.
+
+Ainda assim, a estrutura do projeto foi organizada considerando futura evolução para automação E2E e integração contínua, mantendo compatibilidade com ferramentas modernas de QA.
+
+
 # 📌 Objetivos do Projeto
 
 Garantir a qualidade dos principais fluxos da aplicação:
@@ -265,6 +294,7 @@ Toda a documentação do projeto está centralizada exclusivamente no GitHub.
 | Cypress | automação |
 
 ---
+
 
 # 🧠 Estratégia de QA Aplicada
 
